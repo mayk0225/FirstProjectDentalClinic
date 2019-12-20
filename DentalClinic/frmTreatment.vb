@@ -14,7 +14,7 @@ Public Class frmTreatment
         dgvTreatment.Columns(1).Name = "Tooth Qty"
         dgvTreatment.Columns(2).Name = "Tooth Number/s"
         dgvTreatment.Columns(3).Name = "Remarks"
-        ''
+
     End Sub
 
     Public Sub refreshComboBoxes()
