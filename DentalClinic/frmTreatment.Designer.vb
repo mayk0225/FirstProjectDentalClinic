@@ -24,17 +24,19 @@ Partial Class frmTreatment
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.pbxNewPatient = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.lblPatientID = New System.Windows.Forms.Label()
         Me.lblPatientCPNumber = New System.Windows.Forms.Label()
         Me.lblPatientAddress = New System.Windows.Forms.Label()
         Me.lblPatientAge = New System.Windows.Forms.Label()
         Me.lblPatientName = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
         Me.lblAddEditPatient = New System.Windows.Forms.Label()
         Me.gbxTreatment = New System.Windows.Forms.GroupBox()
         Me.btnSubmitTreatment = New System.Windows.Forms.Button()
@@ -85,10 +87,10 @@ Partial Class frmTreatment
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtTreatmentCost = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel14 = New System.Windows.Forms.Panel()
-        Me.pbxNewPatient = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.pbxNewPatient, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        Me.Panel14.SuspendLayout()
         Me.gbxTreatment.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.Panel7.SuspendLayout()
@@ -105,8 +107,6 @@ Partial Class frmTreatment
         Me.Panel6.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.Panel14.SuspendLayout()
-        CType(Me.pbxNewPatient, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -118,10 +118,20 @@ Partial Class frmTreatment
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(668, 179)
+        Me.GroupBox1.Size = New System.Drawing.Size(668, 185)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "PATIENT DETAILS"
+        '
+        'pbxNewPatient
+        '
+        Me.pbxNewPatient.BackgroundImage = Global.DentalClinic.My.Resources.Resources.user1
+        Me.pbxNewPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbxNewPatient.Location = New System.Drawing.Point(21, 33)
+        Me.pbxNewPatient.Name = "pbxNewPatient"
+        Me.pbxNewPatient.Size = New System.Drawing.Size(120, 116)
+        Me.pbxNewPatient.TabIndex = 3
+        Me.pbxNewPatient.TabStop = False
         '
         'Panel2
         '
@@ -132,10 +142,78 @@ Partial Class frmTreatment
         Me.Panel2.Controls.Add(Me.lblPatientAddress)
         Me.Panel2.Controls.Add(Me.lblPatientAge)
         Me.Panel2.Controls.Add(Me.lblPatientName)
-        Me.Panel2.Location = New System.Drawing.Point(156, 25)
+        Me.Panel2.Location = New System.Drawing.Point(156, 31)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(506, 148)
         Me.Panel2.TabIndex = 2
+        '
+        'Panel14
+        '
+        Me.Panel14.BackColor = System.Drawing.Color.DarkCyan
+        Me.Panel14.Controls.Add(Me.Label18)
+        Me.Panel14.Controls.Add(Me.Label22)
+        Me.Panel14.Controls.Add(Me.Label19)
+        Me.Panel14.Controls.Add(Me.Label21)
+        Me.Panel14.Controls.Add(Me.Label20)
+        Me.Panel14.Location = New System.Drawing.Point(0, 0)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(89, 148)
+        Me.Panel14.TabIndex = 20
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.White
+        Me.Label18.Location = New System.Drawing.Point(5, 11)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(83, 16)
+        Me.Label18.TabIndex = 4
+        Me.Label18.Text = "Patient ID :"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.White
+        Me.Label22.Location = New System.Drawing.Point(40, 123)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(47, 16)
+        Me.Label22.TabIndex = 8
+        Me.Label22.Text = "CP # :"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.White
+        Me.Label19.Location = New System.Drawing.Point(33, 40)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(55, 16)
+        Me.Label19.TabIndex = 5
+        Me.Label19.Text = "Name :"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.Color.White
+        Me.Label21.Location = New System.Drawing.Point(14, 96)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(74, 16)
+        Me.Label21.TabIndex = 7
+        Me.Label21.Text = "Address :"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.White
+        Me.Label20.Location = New System.Drawing.Point(45, 68)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(43, 16)
+        Me.Label20.TabIndex = 6
+        Me.Label20.Text = "Age :"
         '
         'lblPatientID
         '
@@ -191,61 +269,6 @@ Partial Class frmTreatment
         Me.lblPatientName.Name = "lblPatientName"
         Me.lblPatientName.Size = New System.Drawing.Size(0, 16)
         Me.lblPatientName.TabIndex = 9
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.ForeColor = System.Drawing.Color.White
-        Me.Label22.Location = New System.Drawing.Point(40, 123)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(47, 16)
-        Me.Label22.TabIndex = 8
-        Me.Label22.Text = "CP # :"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.ForeColor = System.Drawing.Color.White
-        Me.Label21.Location = New System.Drawing.Point(14, 96)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(74, 16)
-        Me.Label21.TabIndex = 7
-        Me.Label21.Text = "Address :"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.White
-        Me.Label20.Location = New System.Drawing.Point(45, 68)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(43, 16)
-        Me.Label20.TabIndex = 6
-        Me.Label20.Text = "Age :"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.White
-        Me.Label19.Location = New System.Drawing.Point(33, 40)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(55, 16)
-        Me.Label19.TabIndex = 5
-        Me.Label19.Text = "Name :"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(5, 11)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(83, 16)
-        Me.Label18.TabIndex = 4
-        Me.Label18.Text = "Patient ID :"
         '
         'lblAddEditPatient
         '
@@ -403,7 +426,7 @@ Partial Class frmTreatment
         Me.dgvTreatment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
@@ -813,29 +836,6 @@ Partial Class frmTreatment
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Treatment Cost"
         '
-        'Panel14
-        '
-        Me.Panel14.BackColor = System.Drawing.Color.DarkCyan
-        Me.Panel14.Controls.Add(Me.Label18)
-        Me.Panel14.Controls.Add(Me.Label22)
-        Me.Panel14.Controls.Add(Me.Label19)
-        Me.Panel14.Controls.Add(Me.Label21)
-        Me.Panel14.Controls.Add(Me.Label20)
-        Me.Panel14.Location = New System.Drawing.Point(0, 0)
-        Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(89, 148)
-        Me.Panel14.TabIndex = 20
-        '
-        'pbxNewPatient
-        '
-        Me.pbxNewPatient.BackgroundImage = Global.DentalClinic.My.Resources.Resources.user1
-        Me.pbxNewPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbxNewPatient.Location = New System.Drawing.Point(21, 33)
-        Me.pbxNewPatient.Name = "pbxNewPatient"
-        Me.pbxNewPatient.Size = New System.Drawing.Size(120, 116)
-        Me.pbxNewPatient.TabIndex = 3
-        Me.pbxNewPatient.TabStop = False
-        '
         'frmTreatment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -851,8 +851,11 @@ Partial Class frmTreatment
         Me.Text = "frmTreatment"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.pbxNewPatient, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel14.ResumeLayout(False)
+        Me.Panel14.PerformLayout()
         Me.gbxTreatment.ResumeLayout(False)
         Me.gbxTreatment.PerformLayout()
         Me.Panel8.ResumeLayout(False)
@@ -880,9 +883,6 @@ Partial Class frmTreatment
         Me.Panel4.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.Panel14.ResumeLayout(False)
-        Me.Panel14.PerformLayout()
-        CType(Me.pbxNewPatient, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
