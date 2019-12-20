@@ -23,9 +23,7 @@ Partial Class frmTreatment
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.pbxNewPatient = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblPatientID = New System.Windows.Forms.Label()
         Me.lblPatientCPNumber = New System.Windows.Forms.Label()
@@ -38,7 +36,7 @@ Partial Class frmTreatment
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.lblAddEditPatient = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.gbxTreatment = New System.Windows.Forms.GroupBox()
         Me.btnSubmitTreatment = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -88,10 +86,10 @@ Partial Class frmTreatment
         Me.txtTreatmentCost = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.pbxNewPatient = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.pbxNewPatient, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.gbxTreatment.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -108,6 +106,7 @@ Partial Class frmTreatment
         Me.Panel4.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel14.SuspendLayout()
+        CType(Me.pbxNewPatient, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -123,16 +122,6 @@ Partial Class frmTreatment
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "PATIENT DETAILS"
-        '
-        'pbxNewPatient
-        '
-        Me.pbxNewPatient.BackgroundImage = Global.DentalClinic.My.Resources.Resources.user1
-        Me.pbxNewPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbxNewPatient.Location = New System.Drawing.Point(21, 33)
-        Me.pbxNewPatient.Name = "pbxNewPatient"
-        Me.pbxNewPatient.Size = New System.Drawing.Size(120, 116)
-        Me.pbxNewPatient.TabIndex = 3
-        Me.pbxNewPatient.TabStop = False
         '
         'Panel2
         '
@@ -206,9 +195,9 @@ Partial Class frmTreatment
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.ForeColor = System.Drawing.Color.Black
-        Me.Label22.Location = New System.Drawing.Point(35, 123)
+        Me.Label22.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.White
+        Me.Label22.Location = New System.Drawing.Point(40, 123)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(47, 16)
         Me.Label22.TabIndex = 8
@@ -217,44 +206,44 @@ Partial Class frmTreatment
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.ForeColor = System.Drawing.Color.Black
+        Me.Label21.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.Color.White
         Me.Label21.Location = New System.Drawing.Point(14, 96)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(68, 16)
+        Me.Label21.Size = New System.Drawing.Size(74, 16)
         Me.Label21.TabIndex = 7
         Me.Label21.Text = "Address :"
         '
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.Black
-        Me.Label20.Location = New System.Drawing.Point(41, 68)
+        Me.Label20.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.White
+        Me.Label20.Location = New System.Drawing.Point(45, 68)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(41, 16)
+        Me.Label20.Size = New System.Drawing.Size(43, 16)
         Me.Label20.TabIndex = 6
         Me.Label20.Text = "Age :"
         '
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.Black
-        Me.Label19.Location = New System.Drawing.Point(30, 40)
+        Me.Label19.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.White
+        Me.Label19.Location = New System.Drawing.Point(33, 40)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(52, 16)
+        Me.Label19.Size = New System.Drawing.Size(55, 16)
         Me.Label19.TabIndex = 5
         Me.Label19.Text = "Name :"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.Black
+        Me.Label18.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.White
         Me.Label18.Location = New System.Drawing.Point(5, 11)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(77, 16)
+        Me.Label18.Size = New System.Drawing.Size(83, 16)
         Me.Label18.TabIndex = 4
         Me.Label18.Text = "Patient ID :"
         '
@@ -268,28 +257,29 @@ Partial Class frmTreatment
         Me.lblAddEditPatient.TabIndex = 0
         Me.lblAddEditPatient.Text = "New Patient"
         '
-        'GroupBox2
+        'gbxTreatment
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.PaleTurquoise
-        Me.GroupBox2.Controls.Add(Me.btnSubmitTreatment)
-        Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.Panel8)
-        Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.Panel7)
-        Me.GroupBox2.Controls.Add(Me.Panel5)
-        Me.GroupBox2.Controls.Add(Me.dgvTreatment)
-        Me.GroupBox2.Controls.Add(Me.btnAddNewTreatment)
-        Me.GroupBox2.Controls.Add(Me.Panel3)
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 206)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(668, 381)
-        Me.GroupBox2.TabIndex = 13
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "TREATMENT"
+        Me.gbxTreatment.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.gbxTreatment.Controls.Add(Me.btnSubmitTreatment)
+        Me.gbxTreatment.Controls.Add(Me.DateTimePicker1)
+        Me.gbxTreatment.Controls.Add(Me.Label8)
+        Me.gbxTreatment.Controls.Add(Me.Panel8)
+        Me.gbxTreatment.Controls.Add(Me.Label7)
+        Me.gbxTreatment.Controls.Add(Me.Label4)
+        Me.gbxTreatment.Controls.Add(Me.Panel7)
+        Me.gbxTreatment.Controls.Add(Me.Panel5)
+        Me.gbxTreatment.Controls.Add(Me.dgvTreatment)
+        Me.gbxTreatment.Controls.Add(Me.btnAddNewTreatment)
+        Me.gbxTreatment.Controls.Add(Me.Panel3)
+        Me.gbxTreatment.Controls.Add(Me.Label2)
+        Me.gbxTreatment.Enabled = False
+        Me.gbxTreatment.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbxTreatment.Location = New System.Drawing.Point(12, 206)
+        Me.gbxTreatment.Name = "gbxTreatment"
+        Me.gbxTreatment.Size = New System.Drawing.Size(668, 381)
+        Me.gbxTreatment.TabIndex = 13
+        Me.gbxTreatment.TabStop = False
+        Me.gbxTreatment.Text = "TREATMENT"
         '
         'btnSubmitTreatment
         '
@@ -410,23 +400,15 @@ Partial Class frmTreatment
         Me.dgvTreatment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvTreatment.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.dgvTreatment.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTreatment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvTreatment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvTreatment.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvTreatment.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvTreatment.Location = New System.Drawing.Point(9, 160)
         Me.dgvTreatment.Name = "dgvTreatment"
         Me.dgvTreatment.ReadOnly = True
@@ -833,7 +815,7 @@ Partial Class frmTreatment
         '
         'Panel14
         '
-        Me.Panel14.BackColor = System.Drawing.Color.LightCyan
+        Me.Panel14.BackColor = System.Drawing.Color.DarkCyan
         Me.Panel14.Controls.Add(Me.Label18)
         Me.Panel14.Controls.Add(Me.Label22)
         Me.Panel14.Controls.Add(Me.Label19)
@@ -844,6 +826,16 @@ Partial Class frmTreatment
         Me.Panel14.Size = New System.Drawing.Size(89, 148)
         Me.Panel14.TabIndex = 20
         '
+        'pbxNewPatient
+        '
+        Me.pbxNewPatient.BackgroundImage = Global.DentalClinic.My.Resources.Resources.user1
+        Me.pbxNewPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbxNewPatient.Location = New System.Drawing.Point(21, 33)
+        Me.pbxNewPatient.Name = "pbxNewPatient"
+        Me.pbxNewPatient.Size = New System.Drawing.Size(120, 116)
+        Me.pbxNewPatient.TabIndex = 3
+        Me.pbxNewPatient.TabStop = False
+        '
         'frmTreatment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -853,17 +845,16 @@ Partial Class frmTreatment
         Me.Controls.Add(Me.Panel13)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.gbxTreatment)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmTreatment"
         Me.Text = "frmTreatment"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.pbxNewPatient, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.gbxTreatment.ResumeLayout(False)
+        Me.gbxTreatment.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         Me.Panel7.ResumeLayout(False)
@@ -891,6 +882,7 @@ Partial Class frmTreatment
         Me.Panel1.PerformLayout()
         Me.Panel14.ResumeLayout(False)
         Me.Panel14.PerformLayout()
+        CType(Me.pbxNewPatient, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -899,7 +891,6 @@ Partial Class frmTreatment
     Friend WithEvents cboTreatment As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents lblAddEditPatient As Label
     Friend WithEvents btnAddNewTreatment As Button
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents btnCancel As Button
@@ -930,7 +921,7 @@ Partial Class frmTreatment
     Friend WithEvents Panel1 As Panel
     Friend WithEvents txtTreatmentCost As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents gbxTreatment As GroupBox
     Friend WithEvents Panel5 As Panel
     Friend WithEvents nudTeethQty As NumericUpDown
     Friend WithEvents dgvTreatment As DataGridView
@@ -958,4 +949,5 @@ Partial Class frmTreatment
     Public WithEvents lblPatientName As Label
     Public WithEvents lblPatientID As Label
     Friend WithEvents Panel14 As Panel
+    Public WithEvents lblAddEditPatient As Label
 End Class

@@ -8,32 +8,33 @@ Public Class frmAddNewRecord
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If con.State = ConnectionState.Closed Then
-            con.Open()
-        End If
 
-        If btnSave.Text = "SAVE" Then
+        Dim cmd As New MySqlCommand("select Count(*) from tblpatientlist", con)
+        Dim patientID = cmd.ExecuteScalar()
 
-            Dim cmd As New MySqlCommand("INSERT INTO `tblpatientlist`(`PatientName`, `Age`, `CPNumber`, `Address`) VALUES ('" + txtNameOfPatient.Text + "', '" + txtAge.Text + "', '" + txtCPNumber.Text + "', '" + txtAddress.Text + "')", con)
-            cmd.ExecuteNonQuery()
-            MsgBox("Record added", MsgBoxStyle.Information, "Record")
+        frmTreatment.lblPatientID.Text = patientID
 
-            Me.Close()
-
-        Else
-            Dim cmdupdate As New MySqlCommand("UPDATE tblpatientlist Set PatientName = '" + txtNameOfPatient.Text + "', Age = '" + txtAge.Text + "', CPNumber = '" + txtCPNumber.Text + "', Address = '" + txtAddress.Text + "' Where PatientID = '" + lblID.Text + "'", con)
-
-            cmdupdate.ExecuteNonQuery()
-            MsgBox("Record updated", MsgBoxStyle.Information, "Record")
-
+        If frmTreatment.lblAddEditPatient.Text = "New Patient" Then
             txtNameOfPatient.Text = ""
             txtAge.Text = ""
             txtCPNumber.Text = ""
             txtAddress.Text = ""
 
-            Me.Close()
+            frmTreatment.lblAddEditPatient.Text = txtNameOfPatient.Text
+            frmTreatment.lblAddEditPatient.Text = txtAge.Text
+            frmTreatment.lblAddEditPatient.Text = txtCPNumber.Text
+            frmTreatment.lblAddEditPatient.Text = txtAddress.Text
+
+        Else
+
+            frmTreatment.lblAddEditPatient.Text = txtNameOfPatient.Text
+            frmTreatment.lblAddEditPatient.Text = txtAge.Text
+            frmTreatment.lblAddEditPatient.Text = txtCPNumber.Text
+            frmTreatment.lblAddEditPatient.Text = txtAddress.Text
+
         End If
 
+        Me.Close()
 
     End Sub
 

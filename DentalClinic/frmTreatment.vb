@@ -51,17 +51,32 @@ Public Class frmTreatment
 
     Private Sub pbxNewPatient_Click(sender As Object, e As EventArgs) Handles pbxNewPatient.Click
 
-        frmAddNewRecord.txtNameOfPatient.Text = ""
-        frmAddNewRecord.txtAge.Text = ""
-        frmAddNewRecord.txtCPNumber.Text = ""
-        frmAddNewRecord.txtAddress.Text = ""
+        'If lblAddEditPatient.Text = "new patient" Then
+        '    frmAddNewRecord.txtNameOfPatient.Text = ""
+        '    frmAddNewRecord.txtAge.Text = ""
+        '    frmAddNewRecord.txtCPNumber.Text = ""
+        '    frmAddNewRecord.txtAddress.Text = ""
+
+        ''    frmAddNewRecord.ShowDialog()
+
+        '    lblPatientName.Text = frmAddNewRecord.txtNameOfPatient.Text
+        '    lblPatientAge.Text = frmAddNewRecord.txtAge.Text
+        '    lblPatientCPNumber.Text = frmAddNewRecord.txtCPNumber.Text
+        '    lblPatientAddress.Text = frmAddNewRecord.txtAddress.Text
+
+        'Else
+
+        '    frmAddNewRecord.ShowDialog()
+        '    lblPatientName.Text = frmAddNewRecord.txtNameOfPatient.Text
+        '    lblPatientAge.Text = frmAddNewRecord.txtAge.Text
+        '    lblPatientCPNumber.Text = frmAddNewRecord.txtCPNumber.Text
+        '    lblPatientAddress.Text = frmAddNewRecord.txtAddress.Text
+
+        'End If
 
         frmAddNewRecord.ShowDialog()
 
-        lblPatientName.Text = frmAddNewRecord.txtNameOfPatient.Text
-        lblPatientAge.Text = frmAddNewRecord.txtAge.Text
-        lblPatientCPNumber.Text = frmAddNewRecord.txtCPNumber.Text
-        lblPatientAddress.Text = frmAddNewRecord.txtAddress.Text
+
 
     End Sub
 
@@ -112,5 +127,11 @@ Public Class frmTreatment
 
 
 
+    End Sub
+
+    Private Sub lblPatientID_TextChanged(sender As Object, e As EventArgs) Handles lblPatientID.TextChanged
+        lblAddEditPatient.Text = "Edit Details"
+        pbxNewPatient.BackgroundImage = My.Resources.useredit
+        gbxTreatment.Enabled = True
     End Sub
 End Class
