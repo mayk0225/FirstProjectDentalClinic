@@ -3,7 +3,7 @@
 Public Class Form1
 
     Dim con As New MySqlConnection("server=localhost;username=root;password=;database=dentalclinic")
-
+    'Comment
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If txtUsername.Text = Nothing Or txtPassword.Text = Nothing Then
             MsgBox("Fill the boxes", MsgBoxStyle.Exclamation)
